@@ -100,4 +100,18 @@ export class LyricsService {
     };
     return response;
   }
+
+  async songs(): Promise<any> {
+    const songsList = [
+      {
+        song: "Let's Go Crazy",
+        endpoint: 'lets-go-crazy',
+      },
+      {
+        song: "Let's Go Crazy (Intro)",
+        endpoint: 'lets-go-crazy-intro',
+      },
+    ];
+    return songsList;
+  }
 }

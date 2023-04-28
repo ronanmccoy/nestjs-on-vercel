@@ -10,6 +10,11 @@ export class LyricsController {
     throw new NotImplementedException();
   }
 
+  @Get('songs')
+  async getSongs() {
+    return this.lyricsService.songs();
+  }
+
   @Get('lets-go-crazy-intro')
   async letsGoCrazyIntro() {
     return this.lyricsService.letsGoCrazyIntro();
