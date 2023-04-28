@@ -1,14 +1,14 @@
 import { Injectable } from '@nestjs/common';
-// import { Logger } from '../common/logger';
+import { Logger } from '../common/logger';
 
 @Injectable()
 export class LyricsService {
-  // logger = Logger.init();
+  logger = Logger.init();
 
   constructor() {}
 
   async letsGoCrazyIntro(): Promise<string> {
-    // this.logger.debug('Returning intro to "Let\'s Go Crazy"');
+    this.logger.debug('Returning intro to "Let\'s Go Crazy"');
 
     const msg =
       " Dearly Beloved. We are gathered here todat to get through this thing called life.\n\nElectric word \"life\", it means forever and that's a mighty long time. But I'm here to tell you there's something else. The afterworld. A world of never ending happiness. You can always see the sun, day or night.\n\nSo when you call up that shrink in Beverly Hills, you know the one, Dr. Everything'll Be Alright. Instead of asking him how much of your time is left, ask him how much of your mind, baby. 'Cause in this life, things are much harder than in the afterworld. In this life, you're on your own. And if the elevator tries to bring you down, go crazy. Punch a higher floor.";
@@ -16,7 +16,7 @@ export class LyricsService {
   }
 
   async letsGoCrazy(): Promise<any> {
-    // this.logger.debug('Returning lyrics for "Let\'s Go Crazy"');
+    this.logger.debug('Returning lyrics for "Let\'s Go Crazy"');
 
     const response = {
       artist: 'Prince',
@@ -109,7 +109,7 @@ export class LyricsService {
   }
 
   async songs(): Promise<any> {
-    // this.logger.debug('Returning list of songs');
+    this.logger.debug('Returning list of songs');
 
     const songsList = [
       {
